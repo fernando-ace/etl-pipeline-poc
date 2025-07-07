@@ -28,11 +28,13 @@ Below is a sample of the cleaned and transformed data written by the ETL pipelin
 
 See `output_sample.csv` in this repository for a full example of the output (first 10,000 rows).
 
-| YEAR | MAKE        | MODEL          | TRIM | BODY   | TRANSMISSION | VIN                | STATE | CONDITION | COLOR  | INTERIOR | SELLER                                           | MMR  | SELLINGPRICE | SALEDATE                     | SALE_DATE   | PROFIT | ODOMETER |
-|------|-------------|----------------|------|--------|--------------|---------------------|-------|-----------|--------|----------|-------------------------------------------------|------|-------------|-------------------------------|-------------|--------|----------|
-| 2005 | Mitsubishi  | Galant         | ES   | sedan | automatic    | 4a3ab36f75e066354  | mn    | 29        | silver | black    | onemain rem/us auto fleet group               | 1975 | 3100        | 2015-06-03T03:30:00-07:00   | 30:00.0     | 1125   | 130422   |
-| 2005 | Mercury     | Grand Marquis  | GS   | sedan | automatic    | 2mefm74w45x611338  | fl    | 24        | white  | tan      | regional acceptance corporation / greenville | 3950 | 4100        | 2015-06-02T09:00:00-07:00   | 00:00.0     | 150    | 84204    |
-| 2005 | Mazda       | Tribute        | s    | suv   | automatic    | 4f2cz06115km48407  | tx    | 29        | red    | black    | fairway ford henderson                       | 3550 | 4600        | 2015-06-03T03:00:00-07:00   | 00:00.0     | 1050   | 91127    |
+| YEAR | VIN                | CONDITION | MMR   | SELLINGPRICE | SALEDATE                     | MAKE       | MODEL          | TRIM             | BODY       | COLOR  | INTERIOR | TRANSMISSION | STATE | SELLER                                 | SALE_DATE                       | PROFIT | ODOMETER |
+|------|--------------------|-----------|-------|--------------|-------------------------------|------------|----------------|------------------|------------|--------|----------|--------------|-------|---------------------------------------|--------------------------------|--------|----------|
+| 2010 | 2cnalfew9a6370363  | 34        | 15900 | 16750        | 2015-06-16T02:30:00-07:00    | Chevrolet  | Equinox        | LTZ              | suv        | gray   | black    | automatic    | OH    | Stratton Auto Sales Inc             | 2015-06-16 02:30:00.000 -0700  | 850    | 28374    |
+| 2010 | 1ftfw1ev7afa46460  | 24        | 24900 | 27700        | 2015-06-18T02:30:00-07:00    | Ford       | F-150          | Harley-Davidson | supercrew  | black  | red      | automatic    | MI    | Multi Auto Trading Inc             | 2015-06-18 02:30:00.000 -0700  | 2800   | 66985    |
+| 2010 | 1j4pn3gk2aw180907  | 39        | 11050 | 12000        | 2015-06-18T05:00:00-07:00    | Jeep       | Liberty        | Renegade         | suv        | green  | gray     | automatic    | AZ    | First Investors Servicing Corp     | 2015-06-18 05:00:00.000 -0700  | 950    | 80537    |
+| 2015 | 1n4al3ap5fc148229  | 5         | 15750 | 16600        | 2015-06-16T04:00:00-07:00    | Nissan     | Altima         | 2.5 S            | sedan      | brown  | black    | automatic    | MO    | Jack Schmitt Cadillac Oldsmobile Inc | 2015-06-16 04:00:00.000 -0700  | 850    | 6617     |
+| 2009 | 1yvhp81a895m29773  | 28        | 7475  | 8300         | 2015-06-16T02:30:00-07:00    | Mazda      | Mazda6         | i Sport          | sedan      | blue   | black    | automatic    | OH    | Pauley Motor Car Co Preowned Vehicles Llc | 2015-06-16 02:30:00.000 -0700  | 825    | 77319    |
 
 These rows demonstrate that the pipeline:
 - Parses complex `SALEDATE` strings into proper timestamps
